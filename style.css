@@ -1,0 +1,77 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+.experiment-area {
+    margin: 20px 0;
+    background: #ecf0f1;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.liquid-container {
+    height: 300px;
+    border: 2px solid #3498db;
+    border-top: none;
+    position: relative;
+    overflow: hidden;
+    background: #f8f9fa;
+}
+
+.liquid {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70%;
+    background: linear-gradient(to top, #3498db, #2980b9);
+    transition: background 0.5s;
+}
+
+.object {
+    position: absolute;
+    bottom: 70%; /* 初始位置在液面上方 */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 36px;
+    transition: bottom 1s ease-in-out;
+}
+
+.control-panel {
+    background: #ecf0f1;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.slider-group {
+    margin: 10px 0;
+}
+
+.data-display {
+    background: #e8f4f8;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.chart-container {
+    height: 300px;
+}

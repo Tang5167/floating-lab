@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮力与液体密度实验</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>浮力与液体密度关系实验</h1>
+        
+        <!-- 实验区 -->
+        <div class="experiment-area">
+            <div class="liquid-container">
+                <div class="liquid" id="liquid"></div>
+                <div class="object" id="object">■</div>
+            </div>
+        </div>
+    
+        <!-- 控制面板 -->
+        <div class="control-panel">
+            <div class="slider-group">
+                <label>液体密度 (g/cm³):</label>
+                <input type="range" id="densitySlider" min="0.5" max="2.0" step="0.1" value="1.0">
+                <span id="densityValue">1.0</span>
+            </div>
+            
+            <div class="slider-group">
+                <label>物体密度 (g/cm³):</label>
+                <input type="range" id="objectDensitySlider" min="0.3" max="3.0" step="0.1" value="0.8">
+                <span id="objectDensityValue">0.8</span>
+            </div>
+            
+            <button id="resetBtn">重置实验</button>
+        </div>
+        
+        <!-- 数据展示区 -->
+        <div class="data-display">
+            <p>浮力: <span id="buoyancyValue">0.00</span> N</p>
+            <p>排开液体体积: <span id="volumeValue">0.00</span> cm³</p>
+            <p>状态: <span id="statusValue">-</span></p>
+        </div>
+        
+        <!-- 图表区 -->
+        <div class="chart-container">
+            <canvas id="chart"></canvas>
+        </div>
+    </div>
+    
+    <!-- 引入库文件 -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
